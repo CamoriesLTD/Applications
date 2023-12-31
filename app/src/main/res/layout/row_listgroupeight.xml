@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listgroupeightRowModel" type="com.hive.app.modules.searchpage.data.model.ListgroupeightRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowgroupeight"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_teal_300_radius_20"
+            android:id="@+id/btnGroupEight"
+            android:layout_height="@dimen/_40pxh"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_width="@dimen/_40pxh"
+            android:paddingHorizontal="@dimen/_13pxh"
+            android:paddingVertical="@dimen/_13pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_group8" tools:ignore="ContentDescription"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnhome"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8pxh"
+            android:layout_weight="0.69" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end" android:id="@+id/txtHome"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                android:text="@{listgroupeightRowModel.txtHome}"
+                style="@style/txtPoppinssemibold14_2" tools:text="@string/lbl_home"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCountry"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:singleLine="true"
+                android:text="@{listgroupeightRowModel.txtCountry}"
+                style="@style/txtPoppinsregular12" tools:text="@string/lbl_jerash_jordan"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
