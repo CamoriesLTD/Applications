@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.hive.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.hive.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <activity
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" android:name="com.facebook.FacebookActivity"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true"
+            android:name="com.hive.app.modules.locationpage.ui.LocationPageActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hive.app.modules.scheduletriptwo.ui.ScheduleTripTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.loginpage.ui.LoginPageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.savedlocation.ui.SavedLocationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.onboardingtwo.ui.OnboardingTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.paymentcard.ui.PaymentCardActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.editprofile.ui.EditProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.paymentmethod.ui.PaymentMethodActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.paymentcardoptions.ui.PaymentCardOptionsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.homepageloading.ui.HomePageLoadingActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.onboardingone.ui.OnboardingOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.signupfilled.ui.SignupFilledActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.spalshscreen.ui.SpalshScreenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.searchpage.ui.SearchPageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.scheduletripone.ui.ScheduleTripOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.mytrips.ui.MyTripsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.paymentcardfilled.ui.PaymentCardFilledActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.savedlocationremove.ui.SavedLocationRemoveActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.loginfilled.ui.LoginFilledActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.nointernetpage.ui.NoInternetPageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.homepage.ui.HomePageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.signuppage.ui.SignupPageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.notaxipage.ui.NoTaxiPageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.myprofile.ui.MyProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.onboardingthree.ui.OnboardingThreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hive.app.modules.selecttrip.ui.SelectTripActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="paymentCardRemoveCardVM" type="com.hive.app.modules.paymentcardremovecard.data.viewmodel.PaymentCardRemoveCardVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearPaymentCard"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearPopup"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_312pxv"
+            android:layout_marginEnd="@dimen/_25pxh"
+            android:layout_marginStart="@dimen/_25pxh"
+            android:layout_marginTop="@dimen/_313pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_5">
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtConfirmation"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_60pxh"
+                android:layout_marginStart="@dimen/_60pxh"
+                android:layout_marginTop="@dimen/_30pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:text="@{paymentCardRemoveCardVM.paymentCardRemoveCardModel.txtConfirmation}"
+                style="@style/txtPoppinssemibold16" tools:text="@string/msg_are_you_sure_to"/>
+            <LinearLayout android:gravity="end"
+                android:id="@+id/linearRowcancel"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_30pxh"
+                android:layout_marginStart="@dimen/_30pxh"
+                android:layout_marginTop="@dimen/_38pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCancel"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_15pxv"
+                    android:layout_marginTop="@dimen/_13pxv"
+                    android:layout_weight="0.27"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{paymentCardRemoveCardVM.paymentCardRemoveCardModel.txtCancel}"
+                    style="@style/txtPoppinssemibold14_1" tools:text="@string/lbl_cancel"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnRemove"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_49pxh"
+                    android:layout_weight="0.73"
+                    android:layout_width="0dp"
+                    android:paddingBottom="@dimen/_14pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_14pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_remove"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded_4" tools:text="@string/lbl_remove"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
